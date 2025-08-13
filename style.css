@@ -1,5 +1,6 @@
-/* Importing a futuristic font */
+/* Import futuristic font */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
 body {
     font-family: 'Orbitron', sans-serif;
     background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #0f2027);
@@ -10,10 +11,8 @@ body {
     display: flex;
     justify-content: center;
     color: #e0e0e0;
-    min-height: 100vh;
+    min-height: 100vh; /* Allows scrolling if content overflows */
 }
-
-/* This makes the card center horizontally but allows vertical scrolling */
 
 /* Tech glow card */
 .card {
@@ -87,26 +86,43 @@ ul li:hover {
     transform: translateX(5px);
 }
 
-/* Social links with glow */
+/* Social links */
 .social-links {
     margin-top: 20px;
 }
 
+/* Base button style */
 .social-links a {
     display: inline-block;
-    margin: 0 8px;
+    margin: 5px;
     text-decoration: none;
-    color: black;
-    background: cyan;
     padding: 8px 15px;
     border-radius: 5px;
     font-weight: bold;
     transition: box-shadow 0.3s ease, background 0.3s ease;
 }
 
+/* Platform-specific colors */
+.social-links a[href*="linkedin"] {
+    background: #0077b5;
+    color: white;
+}
+.social-links a[href*="github"] {
+    background: #333;
+    color: white;
+}
+.social-links a[href*="instagram"] {
+    background: #e1306c;
+    color: white;
+}
+.social-links a[href*="facebook"] {
+    background: #1877f2;
+    color: white;
+}
+
+/* Hover glow for all */
 .social-links a:hover {
-    background: #00cccc;
-    box-shadow: 0 0 15px cyan;
+    box-shadow: 0 0 15px currentColor;
 }
 
 /* Keyframes */
